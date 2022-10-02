@@ -2,7 +2,7 @@
 
 # Step By Step Script Installation
  <b>Step 1</b><br>
-Enter VPS IP before installation<br>
+`Enter VPS IP before installation`<br><br>
  <b>Step 2</b>
 ```
 apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && update-grub && reboot
