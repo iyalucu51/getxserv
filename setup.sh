@@ -1,236 +1,414 @@
-bash -c "$(base64 -d <<< "\
-IyEvYmluL2Jhc2gKY2xlYXIKZnVuY3Rpb24gaW1wb3J0X3N0cmluZygpIHsKICAgIGV4cG9ydCBT
-Q1JJUFRfVVJMPSdodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vaXlhbHVjdTUxL2F1
-dG94L21haW4nCiAgICBleHBvcnQgUkVEPSJcMDMzWzA7MzFtIgogICAgZXhwb3J0IEdSRUVOPSJc
-MDMzWzA7MzJtIgogICAgZXhwb3J0IFlFTExPVz0iXDAzM1swOzMzbSIKICAgIGV4cG9ydCBCTFVF
-PSJcMDMzWzA7MzRtIgogICAgZXhwb3J0IFBVUlBMRT0iXDAzM1swOzM1bSIKICAgIGV4cG9ydCBD
-WUFOPSJcMDMzWzA7MzZtIgogICAgZXhwb3J0IExJR0hUPSJcMDMzWzA7MzdtIgogICAgZXhwb3J0
-IE5DPSJcMDMzWzBtIgogICAgZXhwb3J0IEVSUk9SPSJbJHtSRUR9IEVSUk9SICR7TkN9XSIKICAg
-IGV4cG9ydCBJTkZPPSJbJHtZRUxMT1d9IElORk8gJHtOQ31dIgogICAgZXhwb3J0IEZBSUw9Ilsk
-e1JFRH0gRkFJTCAke05DfV0iCiAgICBleHBvcnQgT0tFWT0iWyR7R1JFRU59IE9LRVkgJHtOQ31d
-IgogICAgZXhwb3J0IFBFTkRJTkc9Ilske1lFTExPV30gUEVORElORyAke05DfV0iCiAgICBleHBv
-cnQgU0VORD0iWyR7WUVMTE9XfSBTRU5EICR7TkN9XSIKICAgIGV4cG9ydCBSRUNFSVZFPSJbJHtZ
-RUxMT1d9IFJFQ0VJVkUgJHtOQ31dIgogICAgZXhwb3J0IFJFRF9CRz0iXGVbNDFtIgogICAgZXhw
-b3J0IEJPTEQ9IlxlWzFtIgogICAgZXhwb3J0IFdBUk5JTkc9IiR7UkVEfVxlWzVtIgogICAgZXhw
-b3J0IFVOREVSTElORT0iXGVbNG0iCn0KaW1wb3J0X3N0cmluZwphcHQgaW5zdGFsbCAteSBiemlw
-MiBnemlwIGNvcmV1dGlscyBzY3JlZW4gY3VybCB1bnppcApzeXNjdGwgLXcgbmV0LmlwdjYuY29u
-Zi5hbGwuZGlzYWJsZV9pcHY2PTEKc3lzY3RsIC13IG5ldC5pcHY2LmNvbmYuZGVmYXVsdC5kaXNh
-YmxlX2lwdjY9MQpkYXRlRnJvbVNlcnZlcj0kKGN1cmwgLXYgLS1pbnNlY3VyZSAtLXNpbGVudCBo
-dHRwczovL2dvb2dsZS5jb20vIDI+JjEgfCBncmVwIERhdGUgfCBzZWQgLWUgJ3MvPCBEYXRlOiAv
-LycpCmJpamk9YGRhdGUgKyIlWS0lbS0lZCIgLWQgIiRkYXRlRnJvbVNlcnZlciJgCiMjIyMjIyMj
-IyMjIyMjIyMjIyMjIyMjIyMKQlVSSVEgKCkgewogICAgY3VybCAtc1MgaHR0cHM6Ly9yYXcuZ2l0
-aHVidXNlcmNvbnRlbnQuY29tL2t1cm9zZXd1L3Blcm1pc3Npb24vbWFpbi9pcC50eHQgPiAvcm9v
-dC90bXAKICAgIGRhdGE9KCBgY2F0IC9yb290L3RtcCB8IGdyZXAgLUUgIl4jIyMgIiB8IGF3ayAn
-e3ByaW50ICQyfSdgICkKICAgIGZvciB1c2VyIGluICIke2RhdGFbQF19IgogICAgZG8KICAgIGV4
-cD0oIGBncmVwIC1FICJeIyMjICR1c2VyIiAiL3Jvb3QvdG1wIiB8IGF3ayAne3ByaW50ICQzfSdg
-ICkKICAgIGQxPShgZGF0ZSAtZCAiJGV4cCIgKyVzYCkKICAgIGQyPShgZGF0ZSAtZCAiJGJpamki
-ICslc2ApCiAgICBleHAyPSQoKCAoZDEgLSBkMikgLyA4NjQwMCApKQogICAgaWYgW1sgIiRleHAy
-IiAtbGUgIjAiIF1dOyB0aGVuCiAgICBlY2hvICR1c2VyID4gL2V0Yy8uJHVzZXIuaW5pCiAgICBl
-bHNlCiAgICBybSAtZiAvZXRjLy4kdXNlci5pbmkgPiAvZGV2L251bGwgMj4mMQogICAgZmkKICAg
-IGRvbmUKICAgIHJtIC1mIC9yb290L3RtcAp9Ck1ZSVA9JChjdXJsIC1zUyBpcHY0LmljYW5oYXpp
-cC5jb20pCk5hbWU9JChjdXJsIC1zUyBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20v
-a3Vyb3Nld3UvcGVybWlzc2lvbi9tYWluL2lwLnR4dCB8IGdyZXAgJE1ZSVAgfCBhd2sgJ3twcmlu
-dCAkMn0nKQplY2hvICROYW1lID4gL3Vzci9sb2NhbC9ldGMvLiROYW1lLmluaQpDZWtPbmU9JChj
-YXQgL3Vzci9sb2NhbC9ldGMvLiROYW1lLmluaSkKQmxvbWFuICgpIHsKaWYgWyAtZiAiL2V0Yy8u
-JE5hbWUuaW5pIiBdOyB0aGVuCkNla1R3bz0kKGNhdCAvZXRjLy4kTmFtZS5pbmkpCiAgICBpZiBb
-ICIkQ2VrT25lIiA9ICIkQ2VrVHdvIiBdOyB0aGVuCiAgICAgICAgcmVzPSJFeHBpcmVkIgogICAg
-ZmkKZWxzZQpyZXM9IlBlcm1pc3Npb24gQWNjZXB0ZWQuLi4iCmZpCn0KUEVSTUlTU0lPTiAoKSB7
-CiAgICBNWUlQPSQoY3VybCAtc1MgaXB2NC5pY2FuaGF6aXAuY29tKQogICAgSVpJTj0kKGN1cmwg
-LXNTIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9rdXJvc2V3dS9wZXJtaXNzaW9u
-L21haW4vaXAudHh0IHwgYXdrICd7cHJpbnQgJDR9JyB8IGdyZXAgJE1ZSVApCiAgICBpZiBbICIk
-TVlJUCIgPSAiJElaSU4iIF07IHRoZW4KICAgIEJsb21hbgogICAgZWxzZQogICAgcmVzPSJQZXJt
-aXNzaW9uIERlbmllZCEiCiAgICBmaQogICAgQlVSSVEKfQpncmVlbigpIHsgZWNobyAtZSAiXFww
-MzNbMzI7MW0keyp9XFwwMzNbMG0iOyB9CnJlZCgpIHsgZWNobyAtZSAiXFwwMzNbMzE7MW0keyp9
-XFwwMzNbMG0iOyB9ClBFUk1JU1NJT04KaWYgWyAtZiAvaG9tZS9uZWVkdXBkYXRlIF07IHRoZW4K
-cmVkICJZb3VyIHNjcmlwdCBuZWVkIHRvIHVwZGF0ZSBmaXJzdCAhIgpleGl0IDAKZWxpZiBbICIk
-cmVzIiA9ICJQZXJtaXNzaW9uIEFjY2VwdGVkLi4uIiBdOyB0aGVuCmVjaG8gLW5lCmVsc2UKcmVk
-ICJQZXJtaXNzaW9uIERlbmllZCEiCmV4aXQgMApmaQojIC8vIENoZWNraW5nIGFyY2hpdGVjdHVy
-ZQppZiBbWyAkKHVuYW1lIC1tKSA9PSAneDg2XzY0JyBdXTsgdGhlbgogICAgZXhwb3J0IEFSQ0hf
-Q0hLPSd0cnVlJwplbHNlCiAgICBjbGVhcgogICAgZWNobyAtZSAiJHtGQUlMfSBBcmNoaXRlY3R1
-cmUgYW5kYSB0aWRhayBkaWR1a3VuZyAhIgogICAgZXhpdCAxCmZpCiAgICAKIyAvLyBNZW1idWF0
-IEZvbGRlciB1bnR1ayBtZW55aW1wYW4gZGF0YSB1dGFtYQp3Z2V0IC1xIC1PIC91c3IvYmluL2Nm
-IHdnZXQgJHtTQ1JJUFQgX1VSTH0vY2Yuc2gKY2htb2QgK3ggL3Vzci9iaW4vY2YKbWtkaXIgLXAg
-L2V0Yy94cmF5Lwpta2RpciAtcCAvZXRjL3hyYXkvY29yZS8KbWtkaXIgLXAgL2V0Yy94cmF5L2xv
-Zy8KbWtkaXIgLXAgL2V0Yy94cmF5L2NvbmZpZy8KZnVuY3Rpb24gZG9taW5hc2koKSB7CmNsZWFy
-CmVjaG8gIiIKZWNobyAiIDEpLiBNYW51YWwgRG9tYWluIElucHV0CjIpLiAgVXNlIFRoZSBEZWZh
-dWx0IERvbWFpbiIKZWNobyAiIENob29zZSBhIG51bWJlciBiZWZvcmUgc3RhcnRpbmcgdGhlIGlu
-c3RhbGxhdGlvbiIKcmVhZCAtIHAgIiBbMS0yIHNlbGVjdCBudW1iZXJdOiAiIG5vbWlzaQpjYXNl
-ICRub21pc2kgaW4KZWNobyAiIgoxKQpjZgo7OwoyKQpjbGVhcgpyZWFkIC1ycCAiSW5wdXQgdXIg
-ZG9tYWluIDogIiAtZSBob3N0bmFtZQplY2hvICIkaG9zdG5hbWUiID4vZXRjL3hyYXkvZG9tYWlu
-LmNvbmYKZWNobyAiIFN1Y2Nlc3NmdWxseSBpbnB1dCBEb21haW4sIFBsZWFzZSB3YWl0aW5nIC4u
-LiIKOzsKKikKZWNobyAid3JvbmcgY2hvaWNlLCBwbGVhc2UgY29ycmVjdCBhZ2FpbiAmIHVwZGF0
-ZSBkb21haW4gbWFudWFsbHkiCjs7CmVzYWMKfQpkb21pbmFzaQpob3N0bmFtZT0kKGNhdCAvZXRj
-L3hyYXkvZG9tYWluLmNvbmYpCiMgLy8gTWVuZ3VwZGF0ZSByZXBvIGRhbiBoYXB1cyBwcm9ncmFt
-IHlhbmcgdGlkYWsgZGlidXR1aGthbgphcHQgdXBkYXRlIC15CmFwdCB1cGdyYWRlIC15CmFwdCBk
-aXN0LXVwZ3JhZGUgLXkKYXB0IGF1dG9yZW1vdmUgLXkKYXB0IGNsZWFuIC15CiMgLy8gQ29sb3Ig
-QkcKYXB0LWdldCBpbnN0YWxsIGZpZ2xldCAteQphcHQtZ2V0IGluc3RhbGwgcnVieSAteQpnZW0g
-aW5zdGFsbCBsb2xjYXQKcm0gL3Jvb3QvLmJhc2hyYwp3Z2V0IC1xIC1PIC5iYXNocmMgJHtTQ1JJ
-UFRfVVJMfS8uYmFzaHJjCiMgLy8gTWVuZ2hhcHVzIGFwYWNoZTIgbmdpbnggc2VuZG1haWwgdWZ3
-IGZpcmV3YWxsIGRhbiBleGltNCB1bnR1ayBtZW5naGluZGFyaSBwb3J0IG5hYnJhawphcHQgcmVt
-b3ZlIC0tcHVyZ2UgbmdpbnggYXBhY2hlMiBzZW5kbWFpbCB1ZncgZmlyZXdhbGxkIGV4aW00IC15
-ID4vZGV2L251bGwgMj4mMQphcHQgYXV0b3JlbW92ZSAteQphcHQgY2xlYW4gLXkKIyAvLyBNZW5n
-aW5zdGFsbCBwYWtldCB5YW5nIGRpIGJ1dHVoa2FuCmFwdCBpbnN0YWxsIGJ1aWxkLWVzc2VudGlh
-bCBhcHQtdHJhbnNwb3J0LWh0dHBzIC15CmFwdCBpbnN0YWxsIHppcCB1bnppcCBuYW5vIG5ldC10
-b29scyBtYWtlIGdpdCBsc29mIHdnZXQgY3VybCBqcSBiYyBnY2MgbWFrZSBjbWFrZSBuZW9mZXRj
-aCBodG9wIGxpYnNzbC1kZXYgc29jYXQgc2VkIHpsaWIxZy1kZXYgbGlic3FsaXRlMy1kZXYgbGli
-cGNyZTMgbGlicGNyZTMtZGV2IGxpYmdkLWRldiAteQphcHQtZ2V0IGluc3RhbGwgdXVpZC1ydW50
-aW1lCiMgLy8gTWVuZ2hlbnRpa2FuIFBvcnQgNDQzICYgODAgamlrYSBiZXJqYWxhbgpsc29mIC10
-IC1pIHRjcDo4MCAtcyB0Y3A6bGlzdGVuIHwgeGFyZ3Mga2lsbCA+L2Rldi9udWxsIDI+JjEKbHNv
-ZiAtdCAtaSB0Y3A6NDQzIC1zIHRjcDpsaXN0ZW4gfCB4YXJncyBraWxsID4vZGV2L251bGwgMj4m
-MQojIC8vIE1lbWJ1YXQgc2VydGlmaWthdCBsZXRzZW5jcnlwdCB1bnR1ayB4cmF5CnJtIC1yZiAv
-cm9vdC8uYWNtZS5zaApta2RpciAtcCAvcm9vdC8uYWNtZS5zaAp3Z2V0IC1xIC1PIC9yb290Ly5h
-Y21lLnNoL2FjbWUuc2ggIiR7U0NSSVBUX1VSTH0vYWNtZS5zaCIKY2htb2QgK3ggL3Jvb3QvLmFj
-bWUuc2gvYWNtZS5zaAovcm9vdC8uYWNtZS5zaC9hY21lLnNoIC0tcmVnaXN0ZXItYWNjb3VudCAt
-bSB0YW1iYXJpbjQ1QGdtYWlsLmNvbQovcm9vdC8uYWNtZS5zaC9hY21lLnNoIC0taXNzdWUgLWQg
-JGhvc3RuYW1lIC0tc3RhbmRhbG9uZSAtayBlYy0yNTYgLWFrIGVjLTI1NgojIC8vIE1lbnlldHRp
-bmcgd2FrdHUgbWVuamFkaSB3YWt0dSBXSUIKbG4gLWZzIC91c3Ivc2hhcmUvem9uZWluZm8vQXNp
-YS9KYWthcnRhIC9ldGMvbG9jYWx0aW1lCiMgLy8gSW5zdGFsbCBuZ2lueAphcHQtZ2V0IGluc3Rh
-bGwgbGlicGNyZTMgbGlicGNyZTMtZGV2IHpsaWIxZy1kZXYgZGJ1cyAteQplY2hvICJkZWIgaHR0
-cDovL25naW54Lm9yZy9wYWNrYWdlcy9tYWlubGluZS9kZWJpYW4gJChsc2JfcmVsZWFzZSAtY3Mp
-IG5naW54IiB8CnN1ZG8gdGVlIC9ldGMvYXB0L3NvdXJjZXMubGlzdC5kL25naW54Lmxpc3QKY3Vy
-bCAtZnNTTCBodHRwczovL25naW54Lm9yZy9rZXlzL25naW54X3NpZ25pbmcua2V5IHwgYXB0LWtl
-eSBhZGQgLQphcHQgdXBkYXRlCmFwdCBpbnN0YWxsIG5naW54IC15CndnZXQgLXEgLU8gL2V0Yy9u
-Z2lueC9uZ2lueC5jb25mICIke1NDUklQVF9VUkx9L25naW54LmNvbmYiCndnZXQgLXEgLU8gL2V0
-Yy9uZ2lueC9jb25mLmQveHJheS5jb25mICIke1NDUklQVF9VUkx9L3hyYXkuY29uZiIKcm0gLXJm
-IC9ldGMvbmdpbngvY29uZi5kL2RlZmF1bHQuY29uZgpzeXN0ZW1jdGwgZW5hYmxlIG5naW54Cm1r
-ZGlyIC1wIC9ob21lL3Zwcy9wdWJsaWNfaHRtbApjaG93biAtUiB3d3ctZGF0YTp3d3ctZGF0YSAv
-aG9tZS92cHMvcHVibGljX2h0bWwKY2htb2QgLVIgZytydyAvaG9tZS92cHMvcHVibGljX2h0bWwK
-d2dldCAtcSAtTyAvaG9tZS92cHMvcHVibGljX2h0bWwvaW5kZXguaHRtbCAiJHtTQ1JJUFRfVVJM
-fS9pbmRleC5odG1sIgpzeXN0ZW1jdGwgc3RhcnQgbmdpbngKIyAvLyBJbnN0YWxsIFZuc3RhdApO
-RVQ9JChpcCAtbyAkQU5VIC00IHJvdXRlIHNob3cgdG8gZGVmYXVsdCB8IGF3ayAne3ByaW50ICQ1
-fScpCmFwdCAteSBpbnN0YWxsIHZuc3RhdAovZXRjL2luaXQuZC92bnN0YXQgcmVzdGFydAphcHQg
-LXkgaW5zdGFsbCBsaWJzcWxpdGUzLWRldgp3Z2V0IC1xIGh0dHBzOi8vaHVtZGkubmV0L3Zuc3Rh
-dC92bnN0YXQtMi45LnRhci5negp0YXIgenh2ZiB2bnN0YXQtMi45LnRhci5negpjZCB2bnN0YXQt
-Mi45Ci4vY29uZmlndXJlIC0tcHJlZml4PS91c3IgLS1zeXNjb25mZGlyPS9ldGMgJiYgbWFrZSAm
-JiBtYWtlIGluc3RhbGwKY2QKdm5zdGF0IC11IC1pICRORVQKc2VkIC1pICdzL0ludGVyZmFjZSAi
-JyIiZXRoMCIiJyIvSW50ZXJmYWNlICInIiIkTkVUIiInIi9nJyAvZXRjL3Zuc3RhdC5jb25mCmNo
-b3duIHZuc3RhdDp2bnN0YXQgL3Zhci9saWIvdm5zdGF0IC1SCnN5c3RlbWN0bCBlbmFibGUgdm5z
-dGF0Ci9ldGMvaW5pdC5kL3Zuc3RhdCByZXN0YXJ0CnJtIC1mIC9yb290L3Zuc3RhdC0yLjkudGFy
-Lmd6CnJtIC1yZiAvcm9vdC92bnN0YXQtMi45CiMgLy8gSW5zdGFsbCBYcmF5CndnZXQgLXEgLU8g
-L2V0Yy94cmF5L2NvcmUveHJheS56aXAgIiR7U0NSSVBUX1VSTH0veHJheS56aXAiCmNkIC9ldGMv
-eHJheS9jb3JlLwp1bnppcCAtbyB4cmF5LnppcApybSAtZiB4cmF5LnppcApjZCAvcm9vdC8KbWtk
-aXIgLXAgL2V0Yy94cmF5L2xvZy94cmF5Lwpta2RpciAtcCAvZXRjL3hyYXkvY29uZmlnL3hyYXkv
-CndnZXQgLXFPLSAiJHtTQ1JJUFRfVVJMfS90bHMuanNvbiIgfCBqcSAnLmluYm91bmRzWzBdLnN0
-cmVhbVNldHRpbmdzLnh0bHNTZXR0aW5ncy5jZXJ0aWZpY2F0ZXMgKz0gW3siY2VydGlmaWNhdGVG
-aWxlIjogIicvcm9vdC8uYWNtZS5zaC8ke2hvc3RuYW1lfV9lY2MvZnVsbGNoYWluLmNlciciLCJr
-ZXlGaWxlIjogIicvcm9vdC8uYWNtZS5zaC8ke2hvc3RuYW1lfV9lY2MvJHtob3N0bmFtZX0ua2V5
-JyJ9XScgPi9ldGMveHJheS9jb25maWcveHJheS90bHMuanNvbgp3Z2V0IC1xTy0gIiR7U0NSSVBU
-X1VSTH0vbnRscy5qc29uIiA+L2V0Yy94cmF5L2NvbmZpZy94cmF5L25vbnRscy5qc29uCiMgLy8g
-Q3JlYXRlIFNlcnZpY2UgWFJBWQpjYXQgPDxFT0Y+IC9ldGMvc3lzdGVtZC9zeXN0ZW0veHJheUAu
-c2VydmljZQpbVW5pdF0KRGVzY3JpcHRpb249WFJheSBYVExTIFNlcnZpY2UgKCAlaSApCkRvY3Vt
-ZW50YXRpb249aHR0cHM6Ly9naXRodWIuY29tL1hUTFMvWHJheS1jb3JlCkFmdGVyPXN5c2xvZy50
-YXJnZXQgbmV0d29yay1vbmxpbmUudGFyZ2V0CltTZXJ2aWNlXQpVc2VyPXJvb3QKTm9OZXdQcml2
-aWxlZ2VzPXRydWUKRXhlY1N0YXJ0PS9ldGMveHJheS9jb3JlL3hyYXkgLWMgL2V0Yy94cmF5L2Nv
-bmZpZy94cmF5LyVpLmpzb24KTGltaXROUFJPQz0xMDAwMApMaW1pdE5PRklMRT0xMDAwMDAwClJl
-c3RhcnQ9b24tZmFpbHVyZQpSZXN0YXJ0UHJldmVudEV4aXRTdGF0dXM9MjMKW0luc3RhbGxdCldh
-bnRlZEJ5PW11bHRpLXVzZXIudGFyZ2V0CkVPRgpzeXN0ZW1jdGwgZGFlbW9uLXJlbG9hZApzeXN0
-ZW1jdGwgc3RvcCB4cmF5QHRscwpzeXN0ZW1jdGwgZGlzYWJsZSB4cmF5QHRscwpzeXN0ZW1jdGwg
-ZW5hYmxlIHhyYXlAdGxzCnN5c3RlbWN0bCBzdGFydCB4cmF5QHRscwpzeXN0ZW1jdGwgcmVzdGFy
-dCB4cmF5QHRscwpzeXN0ZW1jdGwgc3RvcCB4cmF5QG5vbnRscwpzeXN0ZW1jdGwgZGlzYWJsZSB4
-cmF5QG5vbnRscwpzeXN0ZW1jdGwgZW5hYmxlIHhyYXlAbm9udGxzCnN5c3RlbWN0bCBzdGFydCB4
-cmF5QG5vbnRscwpzeXN0ZW1jdGwgcmVzdGFydCB4cmF5QG5vbnRscwogICAgCiMgLy8gSW5zdGFs
-bCBweXRob24yCmFwdCBpbnN0YWxsIHB5dGhvbjIgLXkgPi9kZXYvbnVsbCAyPiYxCiMgLy8gQ3Jl
-YXRlIG1lbnUKY2QgL3Vzci9iaW4Kd2dldCAtcSAtTyBtZW51ICIke1NDUklQVF9VUkx9L21lbnUu
-c2giCmNobW9kICt4IG1lbnUKd2dldCAtcSAtTyBzcGVlZHRlc3QgIiR7U0NSSVBUX1VSTH0vc3Bl
-ZWR0ZXN0X2NsaS5weSIKY2htb2QgK3ggc3BlZWR0ZXN0CmNkCiAKIyAvLyBDcmVhdGUgQXV0byBF
-WFAKY2QgL3Vzci9iaW4KY2F0ID4gL3Vzci9iaW4veHAgPDwtRU5ECiMhL2Jpbi9iYXNoCmNsZWFy
-CiMgLy8gVk1FU1MKZGF0YT0oIGBjYXQgL2V0Yy94cmF5L3ZtZXNzLWNsaWVudC5jb25mIHwgZ3Jl
-cCAnXlZtZXNzJyB8IGN1dCAtZCAnICcgLWYgMmApOwpub3c9YGRhdGUgKyIlWS0lbS0lZCJgCmZv
-ciB1c2VyIGluICIke2RhdGFbQF19IgpkbwpleHA9JChncmVwIC13ICJeVm1lc3MgJHVzZXIiICIv
-ZXRjL3hyYXkvdm1lc3MtY2xpZW50LmNvbmYiIHwgY3V0IC1kICcgJyAtZiAzKQpkMT0kKGRhdGUg
-LWQgIiRleHAiICslcykKZDI9JChkYXRlIC1kICIkbm93IiArJXMpCmlmIFtbICRkMSAtZXEgJGQy
-ICBdXTsgdGhlbgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uIHwganEgJ2RlbCgu
-aW5ib3VuZHNbMl0uc2V0dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNl
-cn0nIikpJyA+L2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uLmJhayAmJiBtdiAvZXRjL3hy
-YXkvY29uZmlnL3hyYXkvdGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25maWcveHJheS90bHMuanNv
-bgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uIHwganEgJ2RlbCguaW5ib3VuZHNb
-NV0uc2V0dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+
-L2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uLmJhayAmJiBtdiAvZXRjL3hyYXkvY29uZmln
-L3hyYXkvdGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25maWcveHJheS90bHMuanNvbgpjYXQgL2V0
-Yy94cmF5L2NvbmZpZy94cmF5L25vbnRscy5qc29uIHwganEgJ2RlbCguaW5ib3VuZHNbMF0uc2V0
-dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+L2V0Yy94
-cmF5L2NvbmZpZy94cmF5L25vbnRscy5qc29uLmJhayAmJiBtdiAvZXRjL3hyYXkvY29uZmlnL3hy
-YXkvbm9udGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25maWcveHJheS9ub250bHMuanNvbgpybSAt
-ZiAvZXRjL3hyYXkveHJheS1jYWNoZS92bWVzcy10bHMtZ3VuLSR1c2VyLmpzb24gL2V0Yy94cmF5
-L3hyYXktY2FjaGUvdm1lc3MtdGxzLXdzLSR1c2VyLmpzb24gL2V0Yy94cmF5L3hyYXktY2FjaGUv
-dm1lc3Mtbm9udGxzLSR1c2VyLmpzb24Kc2VkIC1pICIvXGIkdXNlclxiL2QiIC9ldGMveHJheS92
-bWVzcy1jbGllbnQuY29uZgpmaQpkb25lCnN5c3RlbWN0bCByZXN0YXJ0IHhyYXlAdGxzCnN5c3Rl
-bWN0bCByZXN0YXJ0IHhyYXlAbm9udGxzCmRhdGE9KCBgY2F0IC9ldGMveHJheS92bGVzcy1jbGll
-bnQuY29uZiB8IGdyZXAgJ15WbGVzcycgfCBjdXQgLWQgJyAnIC1mIDJgKTsKbm93PWBkYXRlICsi
-JVktJW0tJWQiYApmb3IgdXNlciBpbiAiJHtkYXRhW0BdfSIKZG8KIyAvLyBWTEVTUwpleHA9JChn
-cmVwIC13ICJeVmxlc3MgJHVzZXIiICIvZXRjL3hyYXkvdmxlc3MtY2xpZW50LmNvbmYiIHwgY3V0
-IC1kICcgJyAtZiAzKQpkMT0kKGRhdGUgLWQgIiRleHAiICslcykKZDI9JChkYXRlIC1kICIkbm93
-IiArJXMpCmlmIFtbICRkMSAtZXEgJGQyICBdXTsgdGhlbgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94
-cmF5L3Rscy5qc29uIHwganEgJ2RlbCguaW5ib3VuZHNbM10uc2V0dGluZ3MuY2xpZW50c1tdIHwg
-c2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+L2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rs
-cy5qc29uLmJhayAmJiBtdiAvZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24uYmFrIC9ldGMv
-eHJheS9jb25maWcveHJheS90bHMuanNvbgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5q
-c29uIHwganEgJ2RlbCguaW5ib3VuZHNbNl0uc2V0dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5l
-bWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+L2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uLmJh
-ayAmJiBtdiAvZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25m
-aWcveHJheS90bHMuanNvbgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94cmF5L25vbnRscy5qc29uIHwg
-anEgJ2RlbCguaW5ib3VuZHNbMV0uc2V0dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9
-PSAiJyR7dXNlcn0nIikpJyA+L2V0Yy94cmF5L2NvbmZpZy94cmF5L25vbnRscy5qc29uLmJhayAm
-JiBtdiAvZXRjL3hyYXkvY29uZmlnL3hyYXkvbm9udGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25m
-aWcveHJheS9ub250bHMuanNvbgpzZWQgLWkgIi9cYiR1c2VyXGIvZCIgL2V0Yy94cmF5L3ZsZXNz
-LWNsaWVudC5jb25mCmZpCmRvbmUKc3lzdGVtY3RsIHJlc3RhcnQgeHJheUB0bHMKc3lzdGVtY3Rs
-IHJlc3RhcnQgeHJheUBub250bHMKZGF0YT0oIGBjYXQgL2V0Yy94cmF5L3Ryb2phbi1jbGllbnQu
-Y29uZiB8IGdyZXAgJ15Ucm9qYW4nIHwgY3V0IC1kICcgJyAtZiAyYCk7Cm5vdz1gZGF0ZSArIiVZ
-LSVtLSVkImAKZm9yIHVzZXIgaW4gIiR7ZGF0YVtAXX0iCmRvCiMgLy8gVFJPSkFOCmV4cD0kKGdy
-ZXAgLXcgIl5Ucm9qYW4gJHVzZXIiICIvZXRjL3hyYXkvdHJvamFuLWNsaWVudC5jb25mIiB8IGN1
-dCAtZCAnICcgLWYgMykKZDE9JChkYXRlIC1kICIkZXhwIiArJXMpCmQyPSQoZGF0ZSAtZCAiJG5v
-dyIgKyVzKQppZiBbWyAkZDEgLWVxICRkMiAgXV07IHRoZW4KcHJpbnRmICJ5XG4iIHwgY3AgL2V0
-Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uIC9ldGMveHJheS94cmF5LWNhY2hlL2NhY2hlLW55
-YS5qc29uCmNhdCAvZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24gfCBqcSAnZGVsKC5pbmJv
-dW5kc1swXS5zZXR0aW5ncy5jbGllbnRzW10gfCBzZWxlY3QoLmVtYWlsID09ICInJHt1c2VyfSci
-KSknID4vZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24uYmFrICYmIG12IC9ldGMveHJheS9j
-b25maWcveHJheS90bHMuanNvbi5iYWsgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uCmNh
-dCAvZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24gfCBqcSAnZGVsKC5pbmJvdW5kc1sxXS5z
-ZXR0aW5ncy5jbGllbnRzW10gfCBzZWxlY3QoLmVtYWlsID09ICInJHt1c2VyfSciKSknID4vZXRj
-L3hyYXkvY29uZmlnL3hyYXkvdGxzLmpzb24uYmFrICYmIG12IC9ldGMveHJheS9jb25maWcveHJh
-eS90bHMuanNvbi5iYWsgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uCmNhdCAvZXRjL3hy
-YXkvY29uZmlnL3hyYXkvdGxzLmpzb24gfCBqcSAnZGVsKC5pbmJvdW5kc1s0XS5zZXR0aW5ncy5j
-bGllbnRzW10gfCBzZWxlY3QoLmVtYWlsID09ICInJHt1c2VyfSciKSknID4vZXRjL3hyYXkvY29u
-ZmlnL3hyYXkvdGxzLmpzb24uYmFrICYmIG12IC9ldGMveHJheS9jb25maWcveHJheS90bHMuanNv
-bi5iYWsgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uCnNlZCAtaSAiL1xiJHVzZXJcYi9k
-IiAvZXRjL3hyYXkvdHJvamFuLWNsaWVudC5jb25mCmZpCmRvbmUKc3lzdGVtY3RsIHJlc3RhcnQg
-eHJheUB0bHMKZGF0YT0oIGBjYXQgL2V0Yy94cmF5L3NzLWNsaWVudC5jb25mIHwgZ3JlcCAnXlNo
-YWRvd3NvY2tzJyB8IGN1dCAtZCAnICcgLWYgMmApOwpub3c9YGRhdGUgKyIlWS0lbS0lZCJgCmZv
-ciB1c2VyIGluICIke2RhdGFbQF19IgpkbwojIC8vIFNIQURPV1NPQ0tTCmV4cD0kKGdyZXAgLXcg
-Il5TaGFkb3dzb2NrcyAkdXNlciIgIi9ldGMveHJheS9zcy1jbGllbnQuY29uZiIgfCBjdXQgLWQg
-JyAnIC1mIDMpCmQxPSQoZGF0ZSAtZCAiJGV4cCIgKyVzKQpkMj0kKGRhdGUgLWQgIiRub3ciICsl
-cykKaWYgW1sgJGQxIC1lcSAkZDIgIF1dOyB0aGVuCnByaW50ZiAieVxuIiB8IGNwIC9ldGMveHJh
-eS9jb25maWcveHJheS90bHMuanNvbiAvZXRjL3hyYXkveHJheS1jYWNoZS9jYWNoZS1ueWEuanNv
-bgpjYXQgL2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uIHwganEgJ2RlbCguaW5ib3VuZHNb
-N10uc2V0dGluZ3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+
-L2V0Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uLmJhayAmJiBtdiAvZXRjL3hyYXkvY29uZmln
-L3hyYXkvdGxzLmpzb24uYmFrIC9ldGMveHJheS9jb25maWcveHJheS90bHMuanNvbgpjYXQgL2V0
-Yy94cmF5L2NvbmZpZy94cmF5L3Rscy5qc29uIHwganEgJ2RlbCguaW5ib3VuZHNbOF0uc2V0dGlu
-Z3MuY2xpZW50c1tdIHwgc2VsZWN0KC5lbWFpbCA9PSAiJyR7dXNlcn0nIikpJyA+L2V0Yy94cmF5
-L2NvbmZpZy94cmF5L3Rscy5qc29uLmJhayAmJiBtdiAvZXRjL3hyYXkvY29uZmlnL3hyYXkvdGxz
-Lmpzb24uYmFrIC9ldGMveHJheS9jb25maWcveHJheS90bHMuanNvbgpzZWQgLWkgIi9cYiR1c2Vy
-XGIvZCIgL2V0Yy94cmF5L3NzLWNsaWVudC5jb25mCnJtIC1mIC9ob21lL3Zwcy9wdWJsaWNfaHRt
-bC9zcy1ncnBjLSR7dXNlcn0udHh0CnJtIC1mIC9ob21lL3Zwcy9wdWJsaWNfaHRtbC9zcy13cy0k
-e3VzZXJ9LnR4dApmaQpkb25lCnN5c3RlbWN0bCByZXN0YXJ0IHhyYXlAdGxzCkVORApjaG1vZCAr
-eCAvdXNyL2Jpbi94cApzZWQgLWkgLWUgJ3MvXHIkLy8nIHhwCmNkCiMgLy8gU2V0dGluZyBBdXRv
-IFJlYm9vdCAmIEV4cCBVc2VyCmVjaG8gIjAgNSAqICogKiByb290IHJlYm9vdCIgPj4gL2V0Yy9j
-cm9udGFiCmVjaG8gIjAgMCAqICogKiByb290IHhwIiA+PiAvZXRjL2Nyb250YWIKY2QKbWtkaXIg
-L2hvbWUvdHJvamFuCm1rZGlyIC9ob21lL3ZtZXNzCm1rZGlyIC9ob21lL3ZsZXNzCm1rZGlyIC9o
-b21lL3NoYWRvd3NvY2tzCiMgSW1wb3J0IEpTT04KY2F0ID4vaG9tZS92cHMvcHVibGljX2h0bWwv
-dHJvamFuLmpzb24gPDxFTkQKewogICAgIlRDUCBUTFMiIDogIjQ0MyIsCiAgICAiV1MgVExTIiA6
-ICI0NDMiCn0KRU5ECmNhdCA+L2hvbWUvdnBzL3B1YmxpY19odG1sL3ZtZXNzLmpzb24gPDxFTkQK
-ewogICAgIldTIFRMUyIgOiAiNDQzIiwKICAgICJXUyBOb24gVExTIiA6ICI4MCIKfQpFTkQKY2F0
-ID4vaG9tZS92cHMvcHVibGljX2h0bWwvdmxlc3MuanNvbiA8PEVORAp7CiAgICAiV1MgVExTIiA6
-ICI0NDMiLAogICAgIldTIE5vbiBUTFMiIDogIjgwIgp9CkVORApjYXQgPi9ob21lL3Zwcy9wdWJs
-aWNfaHRtbC9zcy5qc29uIDw8RU5ECnsKICAgICJXUyBUTFMiIDogIjQ0MyIsCiAgICAiR1JQQyIg
-OiAiNDQzIgp9CkVORAp0b3VjaCAvZXRjL3hyYXkvdHJvamFuLWNsaWVudC5jb25mCnRvdWNoIC9l
-dGMveHJheS92bWVzcy1jbGllbnQuY29uZgp0b3VjaCAvZXRjL3hyYXkvdmxlc3MtY2xpZW50LmNv
-bmYKdG91Y2ggL2V0Yy94cmF5L3NzLWNsaWVudC5jb25mCiMgLy8gRm9yY2UgY3JlYXRlIGZvbGRl
-ciBmb3IgZml4aW5nIGFjY291bnQgd2FzdGVkCm1rZGlyIC1wIC9ldGMveHJheS94cmF5LWNhY2hl
-LwojIC8vIFNldHRpbmcgZW52aXJvbm1lbnQKZWNobyAnUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vz
-ci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW46L3Vzci9nYW1lczovdXNy
-L2xvY2FsL2dhbWVzOi9zbmFwL2JpbjovZXRjL3hyYXkvY29yZTonID4vZXRjL2Vudmlyb25tZW50
-CnNvdXJjZSAvZXRjL2Vudmlyb25tZW50CiMgLy8gQ2xlYXJpbmcgRGF0YQpjbGVhcgpzbGVlcCAz
-CnJtIC1yZiAvcm9vdC9zZXR1cC5zaAplY2hvICIiCmVjaG8gIiBJbnN0YWxsYXRpb24gSGFzIEJl
-ZW4gU3VjY2Vzc2Z1bGx5Li4uIgpzbGVlcCA1CmNsZWFyCmVjaG8gIiBSZWJvb3QgU3lzdGVtIGlu
-IDEwIFNlY29uZHMuLi4iCnNsZWVwIDEwCnJlYm9vdAo=")" bash "$@"
+#!/bin/bash
+
+clear
+
+function import_string() {
+    export SCRIPT_URL='https://raw.githubusercontent.com/iyalucu51/autox/main'
+    export RED="\033[0;31m"
+    export GREEN="\033[0;32m"
+    export YELLOW="\033[0;33m"
+    export BLUE="\033[0;34m"
+    export PURPLE="\033[0;35m"
+    export CYAN="\033[0;36m"
+    export LIGHT="\033[0;37m"
+    export NC="\033[0m"
+    export ERROR="[${RED} ERROR ${NC}]"
+    export INFO="[${YELLOW} INFO ${NC}]"
+    export FAIL="[${RED} FAIL ${NC}]"
+    export OKEY="[${GREEN} OKEY ${NC}]"
+    export PENDING="[${YELLOW} PENDING ${NC}]"
+    export SEND="[${YELLOW} SEND ${NC}]"
+    export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+    export RED_BG="\e[41m"
+    export BOLD="\e[1m"
+    export WARNING="${RED}\e[5m"
+    export UNDERLINE="\e[4m"
+}
+
+import_string
+
+apt install -y bzip2 gzip coreutils screen curl unzip
+
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#########################
+
+BURIQ () {
+    curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt > /root/tmp
+    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
+    for user in "${data[@]}"
+    do
+    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
+    d1=(`date -d "$exp" +%s`)
+    d2=(`date -d "$biji" +%s`)
+    exp2=$(( (d1 - d2) / 86400 ))
+    if [[ "$exp2" -le "0" ]]; then
+    echo $user > /etc/.$user.ini
+    else
+    rm -f /etc/.$user.ini > /dev/null 2>&1
+    fi
+    done
+    rm -f /root/tmp
+}
+
+MYIP=$(curl -sS ipv4.icanhazip.com)
+Name=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | grep $MYIP | awk '{print $2}')
+echo $Name > /usr/local/etc/.$Name.ini
+CekOne=$(cat /usr/local/etc/.$Name.ini)
+
+Bloman () {
+if [ -f "/etc/.$Name.ini" ]; then
+CekTwo=$(cat /etc/.$Name.ini)
+    if [ "$CekOne" = "$CekTwo" ]; then
+        res="Expired"
+    fi
+else
+res="Permission Accepted..."
+fi
+}
+
+PERMISSION () {
+    MYIP=$(curl -sS ipv4.icanhazip.com)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/kurosewu/permission/main/ip.txt | awk '{print $4}' | grep $MYIP)
+    if [ "$MYIP" = "$IZIN" ]; then
+    Bloman
+    else
+    res="Permission Denied!"
+    fi
+    BURIQ
+}
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+
+PERMISSION
+if [ -f /home/needupdate ]; then
+red "Your script need to update first !"
+exit 0
+elif [ "$res" = "Permission Accepted..." ]; then
+echo -ne
+else
+red "Permission Denied!"
+exit 0
+fi
+
+# // Checking architecture
+if [[ $(uname -m) == 'x86_64' ]]; then
+    export ARCH_CHK='true'
+else
+    clear
+    echo -e "${FAIL} Architecture anda tidak didukung !"
+    exit 1
+fi
+
+# // Membuat Folder untuk menyimpan data utama
+wget -q -O /usr/bin/cf ${SCRIPT _URL}/cf.sh
+chmod +x /usr/bin/cf
+    
+function dominasi() {
+clear
+echo ""
+echo " 1). Manual Domain Input
+2).  Use The Default Domain"
+echo " Choose a number before starting the installation"
+read - p " [1-2 select number]: " nomisi
+case $nomisi in
+echo ""
+1)
+cf
+;;
+2)
+clear
+read -rp "Input ur domain : " -e hostname
+echo "$hostname" >/etc/xray/domain.conf
+echo " Successfully input Domain, Please waiting ..."
+;;
+*)
+echo "wrong choice, please correct again & update domain manually"
+;;
+esac
+}
+dominasi
+hostname=$(cat /etc/xray/domain.conf)
+
+# // Mengupdate repo dan hapus program yang tidak dibutuhkan
+apt update -y
+apt upgrade -y
+apt dist-upgrade -y
+apt autoremove -y
+apt clean -y
+
+# // Color BG
+apt-get install figlet -y
+apt-get install ruby -y
+gem install lolcat
+rm /root/.bashrc
+wget -q -O .bashrc ${SCRIPT_URL}/.bashrc
+
+# // Menghapus apache2 nginx sendmail ufw firewall dan exim4 untuk menghindari port nabrak
+apt remove --purge nginx apache2 sendmail ufw firewalld exim4 -y >/dev/null 2>&1
+apt autoremove -y
+apt clean -y
+
+# // Menginstall paket yang di butuhkan
+apt install build-essential apt-transport-https -y
+apt install zip unzip nano net-tools make git lsof wget curl jq bc gcc make cmake neofetch htop libssl-dev socat sed zlib1g-dev libsqlite3-dev libpcre3 libpcre3-dev libgd-dev -y
+apt-get install uuid-runtime
+
+# // Menghentikan Port 443 & 80 jika berjalan
+lsof -t -i tcp:80 -s tcp:listen | xargs kill >/dev/null 2>&1
+lsof -t -i tcp:443 -s tcp:listen | xargs kill >/dev/null 2>&1
+
+# // Membuat sertifikat letsencrypt untuk xray
+rm -rf /root/.acme.sh
+mkdir -p /root/.acme.sh
+wget -q -O /root/.acme.sh/acme.sh "${SCRIPT_URL}/acme.sh"
+chmod +x /root/.acme.sh/acme.sh
+/root/.acme.sh/acme.sh --register-account -m tambarin45@gmail.com
+/root/.acme.sh/acme.sh --issue -d $hostname --standalone -k ec-256 -ak ec-256
+
+# // Menyetting waktu menjadi waktu WIB
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+# // Install nginx
+apt-get install libpcre3 libpcre3-dev zlib1g-dev dbus -y
+echo "deb http://nginx.org/packages/mainline/debian $(lsb_release -cs) nginx" |
+sudo tee /etc/apt/sources.list.d/nginx.list
+curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
+apt update
+apt install nginx -y
+wget -q -O /etc/nginx/nginx.conf "${SCRIPT_URL}/nginx.conf"
+wget -q -O /etc/nginx/conf.d/xray.conf "${SCRIPT_URL}/xray.conf"
+rm -rf /etc/nginx/conf.d/default.conf
+systemctl enable nginx
+mkdir -p /home/vps/public_html
+chown -R www-data:www-data /home/vps/public_html
+chmod -R g+rw /home/vps/public_html
+wget -q -O /home/vps/public_html/index.html "${SCRIPT_URL}/index.html"
+systemctl start nginx
+
+# // Install Vnstat
+NET=$(ip -o $ANU -4 route show to default | awk '{print $5}')
+apt -y install vnstat
+/etc/init.d/vnstat restart
+apt -y install libsqlite3-dev
+wget -q https://humdi.net/vnstat/vnstat-2.9.tar.gz
+tar zxvf vnstat-2.9.tar.gz
+cd vnstat-2.9
+./configure --prefix=/usr --sysconfdir=/etc && make && make install
+cd
+vnstat -u -i $NET
+sed -i 's/Interface "'""eth0""'"/Interface "'""$NET""'"/g' /etc/vnstat.conf
+chown vnstat:vnstat /var/lib/vnstat -R
+systemctl enable vnstat
+/etc/init.d/vnstat restart
+rm -f /root/vnstat-2.9.tar.gz
+rm -rf /root/vnstat-2.9
+
+# // Install Xray
+wget -q -O /etc/xray/core/xray.zip "${SCRIPT_URL}/xray.zip"
+cd /etc/xray/core/
+unzip -o xray.zip
+rm -f xray.zip
+cd /root/
+mkdir -p /etc/xray/log/xray/
+mkdir -p /etc/xray/config/xray/
+wget -qO- "${SCRIPT_URL}/tls.json" | jq '.inbounds[0].streamSettings.xtlsSettings.certificates += [{"certificateFile": "'/root/.acme.sh/${hostname}_ecc/fullchain.cer'","keyFile": "'/root/.acme.sh/${hostname}_ecc/${hostname}.key'"}]' >/etc/xray/config/xray/tls.json
+wget -qO- "${SCRIPT_URL}/ntls.json" >/etc/xray/config/xray/nontls.json
+
+# // Create Service XRAY
+cat <<EOF> /etc/systemd/system/xray@.service
+[Unit]
+Description=XRay XTLS Service ( %i )
+Documentation=https://github.com/XTLS/Xray-core
+After=syslog.target network-online.target
+
+[Service]
+User=root
+NoNewPrivileges=true
+ExecStart=/etc/xray/core/xray -c /etc/xray/config/xray/%i.json
+LimitNPROC=10000
+LimitNOFILE=1000000
+Restart=on-failure
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reload
+systemctl stop xray@tls
+systemctl disable xray@tls
+systemctl enable xray@tls
+systemctl start xray@tls
+systemctl restart xray@tls
+systemctl stop xray@nontls
+systemctl disable xray@nontls
+systemctl enable xray@nontls
+systemctl start xray@nontls
+systemctl restart xray@nontls
+    
+# // Install python2
+apt install python2 -y >/dev/null 2>&1
+
+# // Create menu
+cd /usr/bin
+wget -q -O menu "${SCRIPT_URL}/menu.sh"
+chmod +x menu
+wget -q -O speedtest "${SCRIPT_URL}/speedtest_cli.py"
+chmod +x speedtest
+cd
+ 
+# // Create Auto EXP
+cd /usr/bin
+cat > /usr/bin/xp <<-END
+#!/bin/bash
+clear
+
+# // VMESS
+data=( `cat /etc/xray/vmess-client.conf | grep '^Vmess' | cut -d ' ' -f 2`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^Vmess $user" "/etc/xray/vmess-client.conf" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+if [[ $d1 -eq $d2  ]]; then
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[2].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[5].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/nontls.json | jq 'del(.inbounds[0].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/nontls.json.bak && mv /etc/xray/config/xray/nontls.json.bak /etc/xray/config/xray/nontls.json
+rm -f /etc/xray/xray-cache/vmess-tls-gun-$user.json /etc/xray/xray-cache/vmess-tls-ws-$user.json /etc/xray/xray-cache/vmess-nontls-$user.json
+
+sed -i "/\b$user\b/d" /etc/xray/vmess-client.conf
+fi
+done
+systemctl restart xray@tls
+systemctl restart xray@nontls
+data=( `cat /etc/xray/vless-client.conf | grep '^Vless' | cut -d ' ' -f 2`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+
+# // VLESS
+exp=$(grep -w "^Vless $user" "/etc/xray/vless-client.conf" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+if [[ $d1 -eq $d2  ]]; then
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[3].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[6].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/nontls.json | jq 'del(.inbounds[1].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/nontls.json.bak && mv /etc/xray/config/xray/nontls.json.bak /etc/xray/config/xray/nontls.json
+
+sed -i "/\b$user\b/d" /etc/xray/vless-client.conf
+fi
+done
+systemctl restart xray@tls
+systemctl restart xray@nontls
+data=( `cat /etc/xray/trojan-client.conf | grep '^Trojan' | cut -d ' ' -f 2`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+
+# // TROJAN
+exp=$(grep -w "^Trojan $user" "/etc/xray/trojan-client.conf" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+if [[ $d1 -eq $d2  ]]; then
+printf "y\n" | cp /etc/xray/config/xray/tls.json /etc/xray/xray-cache/cache-nya.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[0].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[1].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[4].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+
+sed -i "/\b$user\b/d" /etc/xray/trojan-client.conf
+fi
+done
+systemctl restart xray@tls
+data=( `cat /etc/xray/ss-client.conf | grep '^Shadowsocks' | cut -d ' ' -f 2`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+
+# // SHADOWSOCKS
+exp=$(grep -w "^Shadowsocks $user" "/etc/xray/ss-client.conf" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+if [[ $d1 -eq $d2  ]]; then
+printf "y\n" | cp /etc/xray/config/xray/tls.json /etc/xray/xray-cache/cache-nya.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[7].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+cat /etc/xray/config/xray/tls.json | jq 'del(.inbounds[8].settings.clients[] | select(.email == "'${user}'"))' >/etc/xray/config/xray/tls.json.bak && mv /etc/xray/config/xray/tls.json.bak /etc/xray/config/xray/tls.json
+
+sed -i "/\b$user\b/d" /etc/xray/ss-client.conf
+rm -f /home/vps/public_html/ss-grpc-${user}.txt
+rm -f /home/vps/public_html/ss-ws-${user}.txt
+fi
+done
+systemctl restart xray@tls
+END
+
+chmod +x /usr/bin/xp
+sed -i -e 's/\r$//' xp
+cd
+
+# // Setting Auto Reboot & Exp User
+echo "0 5 * * * root reboot" >> /etc/crontab
+echo "0 0 * * * root xp" >> /etc/crontab
+cd
+
+mkdir /home/trojan
+mkdir /home/vmess
+mkdir /home/vless
+mkdir /home/shadowsocks
+
+# Import JSON
+cat >/home/vps/public_html/trojan.json <<END
+{
+    "TCP TLS" : "443",
+    "WS TLS" : "443"
+}
+END
+
+cat >/home/vps/public_html/vmess.json <<END
+{
+    "WS TLS" : "443",
+    "WS Non TLS" : "80"
+}
+END
+
+cat >/home/vps/public_html/vless.json <<END
+{
+    "WS TLS" : "443",
+    "WS Non TLS" : "80"
+}
+END
+
+cat >/home/vps/public_html/ss.json <<END
+{
+    "WS TLS" : "443",
+    "GRPC" : "443"
+}
+END
+
+touch /etc/xray/trojan-client.conf
+touch /etc/xray/vmess-client.conf
+touch /etc/xray/vless-client.conf
+touch /etc/xray/ss-client.conf
+
+# // Force create folder for fixing account wasted
+mkdir -p /etc/xray/xray-cache/
+
+# // Setting environment
+echo 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/etc/xray/core:' >/etc/environment
+source /etc/environment
+
+# // Clearing Data
+clear
+sleep 3
+rm -rf /root/setup.sh
+echo ""
+echo " Installation Has Been Successfully..."
+sleep 5
+clear
+echo " Reboot System in 10 Seconds..."
+sleep 10
+reboot
