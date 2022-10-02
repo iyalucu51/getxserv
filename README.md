@@ -1,8 +1,8 @@
 # MULTI XRAY VPN
 
 # Step By Step Script Installation
- <b>Step 1</b>
-Enter VPS IP before installation
+ <b>Step 1</b><br>
+Enter VPS IP before installation<br>
  <b>Step 2</b>
 ```
 apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && update-grub && reboot
